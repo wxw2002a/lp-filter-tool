@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Upload Records</title>
+  </head>
+  <body>
+    <h1>Upload Records</h1>
+    <a href="{{ url_for('upload_file') }}">Upload a New File</a>
+    <ul>
+      {% for file in files %}
+        <li>
+          <strong>{{ file.filename }}</strong><br>
+          Processed Result: {{ file.processed_result }}
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
